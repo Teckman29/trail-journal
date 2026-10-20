@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trail Journal | My Hiking Adventures</title>
+
+    <!-- Connect our CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Website heading -->
+    <header>
+        <h1>Trail Journal 🥾</h1>
+        <p>Exploring the world, one trail at a time.</p>
+    </header>
+
+    <!-- Main content -->
+    <main>
+
+        <section id="intro">
+            <h2>My Hiking Adventures</h2>
+
+            <p>
+                Welcome to my hiking journal.
+                Here, I share the trails I've explored,
+                the views I've discovered and the memories I've made.
+            </p>
+
+            <button id="colourButton">
+                Change Background
+            </button>
+        </section>
+
+        <!-- Our hiking cards -->
+        <section id="hikes">
+
+          
+       <article class="hike-card">
+
+    <img
+        class="hike-image"
+        src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80"
+        alt="Mountain peaks surrounded by clouds"
+    >
+
+    <h3>My First Hike</h3>
+
+    <p>Location: Lake District</p>
+
+    <p>
+        Every hike has a story.
+        This is where mine begins.
+    </p>
+
+    <button class="detailsButton">
+        Show More
+    </button>
+
+    <p class="extra-details" hidden>
+        Add your favourite memory from this hike here.
+    </p>
+    <h3>Favourite Memory</h3>
+<p>One of my favourite moments from this hike...</p>
+<h3>Favourite Memory</h3>
+
+<img
+    <img
+    class="memory-image"
+    src="./20250730_130333.jpg"
+    alt="My favourite hiking memory"
+>
+>
+
+<p>
+    One of my favourite moments from this hike...
+</p>
+
+</article>
+
+
+ <articale class="hike-card">
+    
+    <img
+        class="hike-image"
+        src="20250730_113807.jpg"
+        alt="A trail leading into a forest"
+    >
+
+    <h3>Forest Trail</h3>
+
+    <p>Location: Add your location here</p>
+
+    <p>
+        The forest is a magical place.
+        Every step brings new sights and sounds.
+    </p>
+
+    <button class="detailsButton">
+        Show More
+    </button>
+
+    <p class="extra-details" hidden>
+        Add your favourite memory from this hike here.
+    </p>
+
+    <img
+        class="memory-image"
+        src="20250730_145330.jpg"
+        alt="My favourite hiking memory">
+
+        <p> I love this trail!</p>
+  </articale>
+
+        </section>
+        <section>
+            <h3>My completed hikes</h3>
+            <p>List your completed hikes here.</p>
+            <form id="hikeForm">
+                <label for="hikeName">Hike Name:</label>
+                <input type="text" id="hikeName" name="hikeName" required>
+
+                <label for="hikeLocation">Location:</label>
+                <input type="text" id="hikeLocation" name="hikeLocation" required>
+
+                <label for="hikeDate">Date:</label>
+                <input type="date" id="hikeDate" name="hikeDate" required>
+
+                <button type="submit">Add Hike</button>
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- Connect our JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

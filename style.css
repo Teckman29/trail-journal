@@ -1,0 +1,179 @@
+/* 1. Basic settings for the whole website */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f0e8;
+    color: #26382c;
+    line-height: 1.6;
+    transition: background-color 0.5s ease;
+}
+
+
+/* 2. Website heading */
+
+header {
+    background-color: #263f35;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 5px;
+}
+
+header p {
+    margin-top: 0;
+    color: #d9e4d8;
+}
+
+
+/* 3. Introduction section */
+
+#intro {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 25px;
+    text-align: center;
+}
+
+#intro h2 {
+    font-size: 32px;
+}
+
+
+/* 4. Buttons */
+
+button {
+    background-color: #426b50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin: 10px 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #294b36;
+    transform: translateY(-3px);
+}
+
+
+/* 5. Hiking cards */
+
+#hikes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 20px;
+}
+
+.hike-card {
+    background-color: white;
+    width: 300px;
+    padding: 25px;
+    border-radius: 15px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+/* 6. Make cards float when the mouse is on them */
+
+@media (hover: hover) and (pointer: fine) {
+    .hike-card:hover {
+        transform: translateY(-10px);
+
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    }
+}
+
+.hike-card h3 {
+    color: #315b40;
+    font-size: 23px;
+}
+
+
+/* 7. Extra hiking information */
+
+.extra-details {
+    background-color: #edf3e9;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+
+/* 8. Mobile-friendly layout */
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 32px;
+    }
+
+    #intro h2 {
+        font-size: 26px;
+    }
+
+    .hike-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+
+/* Style the hiking image */
+.hike-image {
+    width: 100%;
+    height: 200px;
+
+    object-fit: cover;
+    border-radius: 10px;
+
+    display: block;
+
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+/* Float the image when the mouse hovers over it */
+@media (hover: hover) and (pointer: fine) {
+    .hike-image:hover {
+        transform: translateY(-12px) scale(1.03);
+
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.memory-image {
+    width: 100%;
+    max-width: 450px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    margin: 15px 0;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.memory-image:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
