@@ -177,3 +177,9 @@ button:hover {
     transform: translateY(-8px) scale(1.02);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
+
+/* Dark mode experiment */
+body {
+    background-color: #1e1e1e;
+    color: white;
+}
