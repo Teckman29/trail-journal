@@ -36,105 +36,110 @@
             </button>
         </section>
 
-        <!-- Our hiking cards -->
-        <section id="hikes">
+        <!-- Our hiking cards and completed-hike form -->
+        <div id="journal-layout">
+          <section id="hikes" aria-label="Hiking adventures">
+            <article class="hike-card">
+                <img
+                    class="hike-image"
+                    src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80"
+                    alt="Mountain peaks surrounded by clouds"
+                >
 
-          
-       <article class="hike-card">
+                <h3>My First Hike</h3>
+                <p>Location: Lake District</p>
+                <p>Every hike has a story. This is where mine begins.</p>
 
-    <img
-        class="hike-image"
-        src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80"
-        alt="Mountain peaks surrounded by clouds"
-    >
+                <button class="detailsButton" type="button" aria-expanded="false">
+                    Show More
+                </button>
 
-    <h3>My First Hike</h3>
+                <div class="extra-details" hidden>
+                    <h3>Favourite Memory</h3>
+                    <p>One of my favourite moments from this hike...</p>
+                    <img
+                        class="memory-image"
+                        src="./20250730_130333.jpg"
+                        alt="My favourite hiking memory"
+                    >
+                </div>
+            </article>
 
-    <p>Location: Lake District</p>
+            <article class="hike-card">
+                <img
+                    class="hike-image"
+                    src="20250730_113807.jpg"
+                    alt="A trail leading into a forest"
+                >
 
-    <p>
-        Every hike has a story.
-        This is where mine begins.
-    </p>
+                <h3>Forest Trail</h3>
+                <p>Location: Add your location here</p>
+                <p>The forest is a magical place. Every step brings new sights and sounds.</p>
 
-    <button class="detailsButton">
-        Show More
-    </button>
+                <button class="detailsButton" type="button" aria-expanded="false">
+                    Show More
+                </button>
 
-    <p class="extra-details" hidden>
-        Add your favourite memory from this hike here.
-    </p>
-    <h3>Favourite Memory</h3>
-<p>One of my favourite moments from this hike...</p>
-<h3>Favourite Memory</h3>
+                <div class="extra-details" hidden>
+                    <h3>Favourite Memory</h3>
+                    <p>I love this trail!</p>
+                    <img
+                        class="memory-image"
+                        src="20250730_145330.jpg"
+                        alt="My favourite hiking memory"
+                    >
+                </div>
+            </article>
 
-<img
-    <img
-    class="memory-image"
-    src="./20250730_130333.jpg"
-    alt="My favourite hiking memory"
->
->
+          </section>
 
-<p>
-    One of my favourite moments from this hike...
-</p>
-
-</article>
-
-
- <articale class="hike-card">
-    
-    <img
-        class="hike-image"
-        src="20250730_113807.jpg"
-        alt="A trail leading into a forest"
-    >
-
-    <h3>Forest Trail</h3>
-
-    <p>Location: Add your location here</p>
-
-    <p>
-        The forest is a magical place.
-        Every step brings new sights and sounds.
-    </p>
-
-    <button class="detailsButton">
-        Show More
-    </button>
-
-    <p class="extra-details" hidden>
-        Add your favourite memory from this hike here.
-    </p>
-
-    <img
-        class="memory-image"
-        src="20250730_145330.jpg"
-        alt="My favourite hiking memory">
-
-        <p> I love this trail!</p>
-  </articale>
-
-        </section>
-        <!-- Learning git and GitHub -->
-        <section>
-            <h3>My completed hikes</h3>
-            <p>List your completed hikes here.</p>
+          <section id="completed-hikes" class="form-card">
+            <h2>Add a completed hike</h2>
+            <p>Save the details and little moments you want to remember.</p>
             <form id="hikeForm">
-                <label for="hikeName">Hike Name:</label>
-                <input type="text" id="hikeName" name="hikeName" required>
+                <div class="form-field">
+                    <label for="hikeName">Hike name</label>
+                    <input type="text" id="hikeName" name="hikeName" placeholder="e.g. Catbells" required>
+                </div>
 
-                <label for="hikeLocation">Location:</label>
-                <input type="text" id="hikeLocation" name="hikeLocation" required>
+                <div class="form-field">
+                    <label for="hikeLocation">Where did you go?</label>
+                    <input type="text" id="hikeLocation" name="hikeLocation" placeholder="Town, park or trail" required>
+                </div>
 
-                <label for="hikeDate">Date:</label>
-                <input type="date" id="hikeDate" name="hikeDate" required>
+                <div class="form-field">
+                    <label for="hikeDate">When did you go?</label>
+                    <input type="date" id="hikeDate" name="hikeDate" required>
+                </div>
 
-                <button type="submit">Add Hike</button>
+                <div class="form-field">
+                    <label for="hikeDifficulty">How challenging was it?</label>
+                    <select id="hikeDifficulty" name="hikeDifficulty">
+                        <option value="">Choose one</option>
+                        <option>Easy</option>
+                        <option>Moderate</option>
+                        <option>Challenging</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="hikeCompanions">Who came along?</label>
+                    <input type="text" id="hikeCompanions" name="hikeCompanions" placeholder="Friends, family or just me">
+                </div>
+
+                <div class="form-field">
+                    <label for="hikeMemory">Favourite moment</label>
+                    <textarea id="hikeMemory" name="hikeMemory" rows="3" placeholder="What would you like to remember?"></textarea>
+                </div>
+
+                <button type="submit">Save my hike</button>
             </form>
+            <p id="formSuccess" class="form-success" role="status" aria-live="polite" hidden>
+                🎉 Hike saved — congratulations on another adventure!
+            </p>
+          </section>
 
-        </section>
+        </div>
 
     </main>
 

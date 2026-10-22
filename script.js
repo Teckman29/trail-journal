@@ -39,15 +39,26 @@ detailsButtons.forEach(function (button) {
 
             extraDetails.hidden = false;
             button.textContent = "Show Less";
+            button.setAttribute("aria-expanded", "true");
 
         } else {
 
             extraDetails.hidden = true;
             button.textContent = "Show More";
+            button.setAttribute("aria-expanded", "false");
 
         }
 
     });
 
+});
+
+// Celebrate when a valid hike form is submitted.
+const hikeForm = document.querySelector("#hikeForm");
+const formSuccess = document.querySelector("#formSuccess");
+
+hikeForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    formSuccess.hidden = false;
 });
 

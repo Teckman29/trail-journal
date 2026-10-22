@@ -178,6 +178,134 @@ button:hover {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
+/* Completed hike form sits beside the adventure cards */
+#journal-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    max-width: 1320px;
+    margin: 0 auto 48px;
+    padding: 0 20px;
+}
+
+#journal-layout #hikes {
+    flex: 1 1 650px;
+    padding: 0;
+}
+
+.form-card {
+    flex: 0 1 360px;
+    min-width: 300px;
+    padding: 25px;
+    border-radius: 16px;
+    background: white;
+    color: #26382c;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .form-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.17);
+    }
+}
+
+.form-card h2 {
+    margin: 0 0 6px;
+    color: #315b40;
+    font-size: 25px;
+}
+
+.form-card > p {
+    margin: 0 0 18px;
+    color: #596b5d;
+}
+
+#hikeForm {
+    display: grid;
+    gap: 14px;
+}
+
+.form-field {
+    display: grid;
+    gap: 5px;
+}
+
+.form-field label {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #c9d5c9;
+    border-radius: 8px;
+    background: #fbfcfa;
+    color: #26382c;
+    font: inherit;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    outline: 3px solid rgba(66, 107, 80, 0.22);
+    border-color: #426b50;
+}
+
+.form-field textarea {
+    resize: vertical;
+}
+
+#hikeForm button {
+    justify-self: start;
+    margin: 2px 0 0;
+}
+
+.form-success {
+    margin: 18px 0 0 !important;
+    padding: 13px;
+    border-radius: 10px;
+    background: #e7f3e5;
+    color: #245332 !important;
+    font-weight: 700;
+    animation: celebrate-in 650ms cubic-bezier(0.18, 0.89, 0.32, 1.28) both;
+}
+
+@keyframes celebrate-in {
+    0% { opacity: 0; transform: translateY(14px) scale(0.92); }
+    65% { opacity: 1; transform: translateY(-3px) scale(1.03); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (max-width: 900px) {
+    #journal-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #journal-layout #hikes {
+        width: 100%;
+    }
+
+    .form-card {
+        width: 100%;
+        max-width: 650px;
+        min-width: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .form-card,
+    .form-success {
+        transition: none;
+        animation: none;
+    }
+}
+
 /* Dark mode experiment */
 body {
     background-color: #1e1e1e;
