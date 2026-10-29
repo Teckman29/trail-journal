@@ -311,3 +311,98 @@ body {
     background-color: #1e1e1e;
     color: white;
 }
+
+
+/* Hiking card layout */
+#hikes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    align-items: start;
+}
+
+/* Individual hiking cards */
+.hike-card {
+    width: auto;
+    background-color: white;
+    color: #222;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    padding-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Lift the card when the mouse hovers over it */
+.hike-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* Main hiking photograph */
+.hike-card .hike-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Card headings and descriptions */
+.hike-card h3,
+.hike-card > p,
+.hike-info {
+    margin-left: 18px;
+    margin-right: 18px;
+}
+
+.hike-card h3 {
+    margin-top: 18px;
+    margin-bottom: 12px;
+}
+
+/* Location, difficulty and distance */
+.hike-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.hike-info p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Difficulty label */
+.hike-difficulty {
+    display: inline-block;
+    background-color: #e2f5e8;
+    color: #216e39;
+    padding: 6px 10px;
+    border-radius: 20px;
+    width: fit-content;
+    font-weight: bold;
+}
+
+/* Show More button */
+.hike-card .detailsButton {
+    margin-left: 18px;
+}
+
+/* Additional hiking memories */
+.hike-card .extra-details {
+    margin: 18px;
+}
+
+.hike-card .memory-image {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    #journal-layout #hikes {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
